@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap');/* web developer text */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');/*  this is the paragraph font*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');/*  front in main text font */
+
+body{
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-image: linear-gradient(0deg, black, rgb(24, 23, 23));
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 5%;
+    width: 100%;
+}
+ 
+#contacts{
+    position: relative;
+    border: .1px solid blue;
+    width: 23%;
+    height: 1%;
+    margin: 1%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px blue, 1px 9px 35px black, inset 0 0 10px blue;
+}
+
+h6{
+    display: flex;
+    flex-flow: row;
+    margin: 2% 5%;
+    font-size: clamp(.4rem, 2vw, .8rem);
+    color: white;
+}
+
+.contact-svg{
+    position: relative;
+    width: 5%;
+    height: 5%;
+    margin-right: 5%;
+}
+
+.contact-svg svg{
+    width: 100%;
+    height: 100%;
+}
+
+#title-container{
+    position: relative;
+    border: 2px solid wheat;
+    min-width: 28%;
+    background-image: linear-gradient(0deg,blue, black);
+    box-shadow: inset 0 0 20px white;
+    padding: 0;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-left: 7%;
+    border-radius: 10px;
+}
+
+#title-container::before, #title-container::after{
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: calc(100%);
+    height:calc(100%);
+    background-image: linear-gradient(50deg, purple, aqua,red, lime, steelblue, aquamarine, orange, silver, cyan,  tan, brown, green, darkblue, black, wheat);    
+    filter: blur(9px);
+    border-radius: 10px;
+    background-size: 400%;
+    z-index: -1;
+    animation: rotated 20s linear infinite;
+}
+
+@keyframes rotated {
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}
+
+#title-container h3{
+    color: white;
+    position: relative;
+    left: 40%;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(.9rem, 2vw, 1.5rem);
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+}
+
+#main-title{
+    /* color: orange; */
+    color: skyblue;
+    font-family: "PT Serif", serif;
+    text-align: center;
+    letter-spacing: 0;
+    word-spacing: .1cap;
+    font-size: clamp(.8rem, 2vw, 2.4rem );
+    text-shadow: 1px 0px 0px black;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 0;
+    padding: 1%;
+}
+
+#main-title span{
+    color: rgb(35, 206, 35);
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(.7rem, 2vw, 2.3rem);
+    text-shadow: 1px 0px 0px black;
+    text-decoration: underline;
+}
+
+#social-media-nav {
+    display: flex;
+    flex-direction: row;
+    transition-duration: .5s;
+    width: 20vw;
+    height: 7.5vh;
+    margin-left: 7%;
+    margin-top: 3%;
+    border-radius: 10px;
+    background: none;
+    box-shadow: 1px 1px 30px black, inset 0 0 15px blue;
+    
+}
+
+#social-media-nav:hover {
+    border: 0.1px solid blue;
+    box-shadow: 1px 1px 20px blue;
+}
+
+#social-media-nav a {
+    display: flex;
+    min-width: 3vw;
+    height: 5.5vh;
+    margin: 2%;
+    transition: all 1s;
+    margin-left: 11%;
+    border-radius: 5px;
+}
+
+#social-media-nav a:hover{
+    border: 1px solid blue;
+    transform: scale(1.1);
+    box-shadow: .1px .1px 24px seashell;
+}
+
+#social-media-nav a svg{
+    position: relative;
+    width: 200%;
+    height: 100%;
+}
+
+main{
+height: 45vh;
+padding: 0;
+}
+
+
+#image-container{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 0;
+}
+
+#slide{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 45%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: rotateWheel 20s linear infinite;
+    z-index: 2;
+}
+
+#slide::before{
+    content: '';
+    position: absolute;
+    top: -83%;
+    left: -110%;
+    background-image: url("/pic/myself.png");
+    background-size: cover; 
+    background-position: center;
+    width: calc(100% + 200px);
+    height: calc(100% + 200px);
+    border-radius: 50%;
+    border: .1px solid blue;
+    box-shadow: inset 0 0 30px blue;
+    -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1));
+}
+
+@keyframes rotateWheel {
+    from{transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);}
+    to{transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);}
+}
+
+.skill-container{
+    position: absolute;
+    border: .1px solid blue;
+    background: none;
+    inset: 0 0 0 0;
+    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
+    border-radius: 10px;
+}
+
+.icon{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.percentage-container{
+    position: relative;
+    border: .1px solid blue;
+    height: 52%;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: auto;
+    box-shadow: .1px .1px 7px blue, inset 0 0 4px blue;
+    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1));
+}
+
+.percentage-bkg{
+    position: absolute;
+    background-color: rgba(70, 130, 180, 0.3);
+    width: 100%;
+    height: 100%;
+    clip-path: ellipse(20% 100% at 10% 10%);
+    z-index: -1;
+}
+
+.percentage-display{
+    color: white;
+    /* font-size: 1.5em; */
+    font-size: clamp(.5rem, 2vw, 1.5rem);
+    stroke-width: 1px;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: lime;
+    margin-top: 1.5%;
+}
