@@ -96,7 +96,6 @@ h6{
 }
 
 #main-title{
-    /* color: orange; */
     color: skyblue;
     font-family: "PT Serif", serif;
     text-align: center;
@@ -191,7 +190,7 @@ padding: 0;
     position: absolute;
     top: -83%;
     left: -110%;
-    background-image: url("/pic/myself.png");
+    background-image: url("pic/myself.png");
     background-size: cover; 
     background-position: center;
     width: calc(100% + 200px);
